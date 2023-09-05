@@ -18,10 +18,26 @@ const CountriesContainer = () => {
     }, []);
 
     const [visitedCountries, setVisitedCountries] = useState([]);
-    const addCountryToVisitedCountries = (visitedCountry) => {
-        const updateCountries = [...visitedCountries, visitedCountry]
-        setVisitedCountries(updateCountries);
+
+    // remove item from the list of countries
+    const handleRemove = (index) => {
+        const visitedCountries = countries.filter((country) => {
+            country.name.common
+            
+        })
+
     }
+    
+    const handleChange = (event) => {
+        setVisitedCountries(event.target.value);
+    }
+
+    const handleAdd = () => {
+        const visitedCountries ={visitedCountries};
+        setCountries
+    }
+    
+   
 
 
     return (
@@ -31,7 +47,8 @@ const CountriesContainer = () => {
             { countries ? <Countries countries = {countries}/> : <p>loading...</p>}
             
             <h2>Visited Countries</h2>
-            <VisitedCountries visitedCountries = {visitedCountries} addCountryToVisitedCountries = {addCountryToVisitedCountries}/> 
+            <VisitedCountries visitedCountries = {visitedCountries} onButtonClick = {setVisitedCountries}/>
+            
 
         </>
 

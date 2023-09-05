@@ -1,7 +1,9 @@
-const Country = ({country, addCountryToVisitedCountries}) => {
+
+
+const Country = ({country, onButtonClick}) => {
 
     const handleVisitedCountryClick = () => {
-        addCountryToVisitedCountries(country)
+        onButtonClick(country)
         
     };
 

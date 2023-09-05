@@ -1,12 +1,11 @@
-import Country from "./Country"
+const VisitedCountries = ({}) => {
 
-const VisitedCountries = ({visitedCountries, addCountryToVisitedCountries}) => {
 
 
     return (
         <>
             <ul>
-                {visitedCountries}
+                
             </ul>
         
         </>
